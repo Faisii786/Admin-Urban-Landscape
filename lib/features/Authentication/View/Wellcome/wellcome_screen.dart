@@ -1,10 +1,8 @@
 import 'package:admin_fix_my_ride/Common/widgets/custom_button.dart';
 import 'package:admin_fix_my_ride/Common/widgets/custom_text.dart';
-import 'package:admin_fix_my_ride/bottom_nav_bar.dart';
 import 'package:admin_fix_my_ride/features/Authentication/View/Signin/sign_in_screen.dart';
 import 'package:admin_fix_my_ride/features/Authentication/View/Signup/sign_up_screen.dart';
 import 'package:admin_fix_my_ride/utills/constants/colors.dart';
-import 'package:admin_fix_my_ride/utills/constants/images.dart';
 import 'package:admin_fix_my_ride/utills/constants/size_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,13 +18,12 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const CustomText(),
-            const Spacer(),
-            Image.asset(
-              CustomImages.blueAppLogo,
-              width: 200,
-              height: 200,
+            CustomText(
+              textAlign: TextAlign.center,
+              txtColor: AppColors.secondaryColor,
+              fontFamily: 'headingFont',
             ),
+            const Spacer(),
             const Spacer(
               flex: 2,
             ),
@@ -46,21 +43,6 @@ class WelcomeScreen extends StatelessWidget {
                 Get.offAll(() => const SignupScreen());
               },
               isOutlined: false,
-            ),
-            const CustomSizedBox(
-              height: 0.03,
-            ),
-            GestureDetector(
-              onTap: () {
-                Get.to(() => BottomNavBar());
-              },
-              child: Text(
-                'SKIP FOR NOW',
-                style: TextStyle(
-                    color: AppColors.blue100,
-                    fontSize: 14,
-                    fontFamily: 'Poppins'),
-              ),
             ),
           ],
         ),

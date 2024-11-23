@@ -25,7 +25,7 @@ class SignupScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: AppColors.blue100,
+                color: AppColors.primaryColor,
                 borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(60),
                   bottomRight: Radius.circular(60),
@@ -119,7 +119,7 @@ class SignupScreen extends StatelessWidget {
                       ontap: () async {
                         await controller.adminSignUp();
                       },
-                      btnColor: AppColors.blue100,
+                      btnColor: AppColors.primaryColor,
                       txtColor: Colors.white,
                     ),
                     const CustomSizedBox(
@@ -142,7 +142,7 @@ class SignupScreen extends StatelessWidget {
                           },
                           child: CustomText(
                             text: "SIGNIN",
-                            txtColor: AppColors.blue100,
+                            txtColor: AppColors.primaryColor,
                             fontSize: 15,
                           ),
                         ),

@@ -8,17 +8,17 @@ Widget buildAnalyticsCard(String title, String value, IconData icon) {
     height: 130,
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
     decoration: BoxDecoration(
-      color: AppColors.blue100.withOpacity(0.1),
+      color: AppColors.primaryColor.withOpacity(0.1),
       borderRadius: BorderRadius.circular(8),
     ),
     child: Column(
       children: [
-        Icon(icon, color: AppColors.blue100, size: 30),
+        Icon(icon, color: AppColors.primaryColor, size: 30),
         const SizedBox(height: 15),
         CustomText(
           text: value,
           fontSize: 16,
-          txtColor: AppColors.blue100,
+          txtColor: AppColors.primaryColor,
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 4),

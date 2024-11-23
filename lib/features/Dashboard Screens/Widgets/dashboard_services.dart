@@ -13,7 +13,7 @@ Column DashboardServices() {
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         crossAxisCount: 3,
-        childAspectRatio: 0.8,
+        childAspectRatio: 0.7,
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
         children: [
@@ -22,37 +22,37 @@ Column DashboardServices() {
               Get.to(() => const ServicesDetailsScreen());
             },
             child: buildServiceItem(
-                "Auto Repair",
-                "https://th.bing.com/th/id/R.a394d6121d4751d622ddc6a17427c150?rik=oEGFSPKg7xaBoQ&pid=ImgRaw&r=0",
+                "Urban Gardening",
+                "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
                 false),
           ),
           buildServiceItem(
-              "Service & Oil",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
+              "Public Space Design",
+              "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
               false),
           buildServiceItem(
-              "Mobile Mechanic",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
+              "Sustainable Landscaping",
+              "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
               false),
           buildServiceItem(
-              "Tires Batteries",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
+              "Community Parks",
+              "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
               false),
           buildServiceItem(
-              "Dent & Paint",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
+              "Green Roofs & Walls",
+              "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
               false),
           buildServiceItem(
-              "Sell My Car",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
+              "Urban Tree Planting",
+              "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
               false),
           buildServiceItem(
-              "RTA Car Reg",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
+              "Outdoor Lighting Design",
+              "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
               false),
           buildServiceItem(
-              "Annual Service",
-              "https://specializedtruckandauto.com/wp-content/uploads/engine-repair-scaled.jpeg",
+              "Stormwater Management",
+              "https://i.pinimg.com/originals/21/75/7a/21757af6d0f49c4bc0d46ceb4f51f9e1.jpg",
               false),
           InkWell(
             onTap: () {

@@ -13,7 +13,7 @@ class CustomDrawer extends StatelessWidget {
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
-              color: AppColors.blue100,
+              color: AppColors.primaryColor,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

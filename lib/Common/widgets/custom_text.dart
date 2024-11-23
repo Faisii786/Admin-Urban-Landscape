@@ -20,13 +20,13 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      text ?? 'Welcome To Fix My Ride',
+      text ?? 'Welcome To Urban Tropical Landscape',
       textAlign: textAlign,
       style: TextStyle(
-        fontFamily: fontFamily ?? 'Poppins',
+        fontFamily: fontFamily ?? 'bodyFont',
         fontSize: fontSize ?? 20,
         fontWeight: FontWeight.w500,
-        color: txtColor ?? AppColors.blue100,
+        color: txtColor ?? AppColors.primaryColor,
       ),
     );
   }

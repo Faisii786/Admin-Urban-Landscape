@@ -19,7 +19,7 @@ class ImagePickerScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: AppColors.blue100),
+          border: Border.all(color: AppColors.primaryColor),
         ),
         child: InkWell(
           onTap: () {
@@ -31,7 +31,7 @@ class ImagePickerScreen extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.image,
-                      color: AppColors.blue100,
+                      color: AppColors.primaryColor,
                       size: 50,
                     ),
                     const SizedBox(height: 10),

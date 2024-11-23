@@ -9,7 +9,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.primaryColor,
         leading: InkWell(
           onTap: () {
             Navigator.of(context).pop();

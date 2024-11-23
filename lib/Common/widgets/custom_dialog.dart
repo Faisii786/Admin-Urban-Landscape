@@ -33,7 +33,7 @@ class CustomDialog extends StatelessWidget {
                     height: 150,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: AppColors.blue100),
+                      border: Border.all(color: AppColors.primaryColor),
                     ),
                     child: Center(
                       child: Icon(
@@ -68,7 +68,7 @@ class CustomDialog extends StatelessWidget {
                       child: CustomText(
                         text: 'Add Service',
                         fontSize: 15,
-                        txtColor: AppColors.blue100,
+                        txtColor: AppColors.primaryColor,
                       ),
                     ),
                   ],

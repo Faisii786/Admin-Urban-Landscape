@@ -17,10 +17,10 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: AppColors.grey5),
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.primaryColor,
         elevation: 0,
         title: CustomText(
-          text: 'Fix My Ride',
+          text: 'Urban Tropical Landscape',
           txtColor: AppColors.grey5,
           fontSize: 20,
         ),
@@ -85,7 +85,7 @@ class DashboardScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.primaryColor,
         onPressed: () => Get.to(() => const AddServiceForm()),
         child: Icon(
           Iconsax.add,

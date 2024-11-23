@@ -13,8 +13,8 @@ Widget buildServiceItem(String title, String imagePath, bool last) {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
               ),
-              child:
-                  Icon(Icons.arrow_forward, color: AppColors.blue100, size: 40),
+              child: Icon(Icons.arrow_forward,
+                  color: AppColors.primaryColor, size: 40),
             )
           : Container(
               width: 100,

@@ -11,7 +11,7 @@ class NoBookingsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: AppColors.grey5),
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.primaryColor,
         elevation: 0,
         title: CustomText(
           text: 'My Bookings',
@@ -47,7 +47,6 @@ class NoBookingsScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.blue80,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),

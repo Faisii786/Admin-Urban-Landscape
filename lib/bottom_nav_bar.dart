@@ -1,7 +1,7 @@
-import 'package:admin_fix_my_ride/features/Booking%20Screens/no_booking_screen.dart';
 import 'package:admin_fix_my_ride/features/Dashboard%20Screens/dashboard_screen.dart';
 import 'package:admin_fix_my_ride/features/Message%20Screens/chat_screen.dart';
 import 'package:admin_fix_my_ride/features/More%20Screens/more_screen.dart';
+import 'package:admin_fix_my_ride/features/Our%20Work/View/work_screen.dart';
 import 'package:admin_fix_my_ride/features/Profile%20Screens/profile_screen.dart';
 import 'package:admin_fix_my_ride/utills/constants/colors.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +14,9 @@ class BottomNavBar extends StatelessWidget {
 
   final List<Widget> _screens = [
     const ProfileScreen(),
-    const NoBookingsScreen(),
+    const OurWorkScreen(),
     const DashboardScreen(),
-    const ChatScreen(),
+    const AdminChatScreen(),
     const MoreScreen(),
   ];
 
@@ -36,12 +36,12 @@ class BottomNavBar extends StatelessWidget {
       bottomNavigationBar: ConvexAppBar(
         height: 60,
         backgroundColor: Colors.white,
-        color: AppColors.grey40,
-        activeColor: AppColors.blue100,
+        color: Colors.grey,
+        activeColor: AppColors.primaryColor,
         style: TabStyle.fixedCircle,
         items: const [
           TabItem(icon: Icons.person, title: 'Profile'),
-          TabItem(icon: Icons.calendar_month, title: 'Booking'),
+          TabItem(icon: Icons.work, title: 'Work'),
           TabItem(icon: Iconsax.main_component, title: ''),
           TabItem(icon: Icons.message, title: 'Message'),
           TabItem(icon: Icons.grid_view, title: 'More'),

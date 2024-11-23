@@ -24,10 +24,12 @@ class CustomButton extends StatelessWidget {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          color:
-              isOutlined ? Colors.transparent : (btnColor ?? AppColors.blue100),
+          color: isOutlined
+              ? Colors.transparent
+              : (btnColor ?? AppColors.secondaryColor),
           border: isOutlined
-              ? Border.all(color: btnColor ?? AppColors.blue100, width: 1)
+              ? Border.all(
+                  color: btnColor ?? AppColors.secondaryColor, width: 1)
               : null,
           borderRadius: BorderRadius.circular(200),
         ),
@@ -37,10 +39,10 @@ class CustomButton extends StatelessWidget {
             child: Text(
               btnText ?? 'LOG IN',
               style: TextStyle(
-                fontFamily: 'Poppins',
+                fontFamily: 'headingFont',
                 color: isOutlined
-                    ? (btnColor ?? AppColors.blue100)
-                    : (txtColor ?? AppColors.grey5),
+                    ? (btnColor ?? AppColors.secondaryColor)
+                    : (txtColor ?? AppColors.whiteColor),
                 fontSize: 16,
               ),
             ),

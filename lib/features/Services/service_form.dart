@@ -12,7 +12,7 @@ class AddServiceForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.blue100,
+        backgroundColor: AppColors.primaryColor,
         leading: InkWell(
           onTap: () {
             Navigator.of(context).pop();
@@ -40,7 +40,7 @@ class AddServiceForm extends StatelessWidget {
                 height: 150,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: AppColors.blue100),
+                  border: Border.all(color: AppColors.primaryColor),
                 ),
                 child: Center(
                   child: Icon(
@@ -70,7 +70,7 @@ class AddServiceForm extends StatelessWidget {
             ),
             const Spacer(),
             CustomButton(
-              btnColor: AppColors.blue100,
+              btnColor: AppColors.primaryColor,
               txtColor: AppColors.grey5,
               btnText: 'Add Service',
               ontap: () {},
