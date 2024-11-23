@@ -6,7 +6,7 @@ class CustomTextField extends StatelessWidget {
   final bool obscureText;
   final TextEditingController? controller;
   final IconData? prefixIcon;
-  final IconData? suffixIcon;
+  final IconButton? suffixIcon;
   final int? maxLine;
   final bool? isMaxLine;
   final String? Function(String?)? validator;
@@ -51,9 +51,7 @@ class CustomTextField extends StatelessWidget {
         prefixIcon: prefixIcon != null
             ? Icon(prefixIcon, color: AppColors.grey40)
             : null,
-        suffixIcon: suffixIcon != null
-            ? Icon(suffixIcon, color: AppColors.grey40)
-            : null,
+        suffixIcon: suffixIcon,
       ),
     );
   }

@@ -7,6 +7,7 @@ class CustomButton extends StatelessWidget {
   final Color? btnColor;
   final Color? txtColor;
   final bool isOutlined;
+  final bool? isLoading;
 
   const CustomButton({
     super.key,
@@ -15,6 +16,7 @@ class CustomButton extends StatelessWidget {
     this.btnColor,
     this.txtColor,
     this.isOutlined = false,
+    this.isLoading = false,
   });
 
   @override
@@ -36,16 +38,21 @@ class CustomButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
           child: Center(
-            child: Text(
-              btnText ?? 'LOG IN',
-              style: TextStyle(
-                fontFamily: 'headingFont',
-                color: isOutlined
-                    ? (btnColor ?? AppColors.secondaryColor)
-                    : (txtColor ?? AppColors.whiteColor),
-                fontSize: 16,
-              ),
-            ),
+            child: isLoading == true
+                ? const CircularProgressIndicator(
+                    color: Colors.white,
+                    strokeWidth: 2,
+                  )
+                : Text(
+                    btnText ?? 'LOG IN',
+                    style: TextStyle(
+                      fontFamily: 'headingFont',
+                      color: isOutlined
+                          ? (btnColor ?? AppColors.secondaryColor)
+                          : (txtColor ?? AppColors.whiteColor),
+                      fontSize: 16,
+                    ),
+                  ),
           ),
         ),
       ),

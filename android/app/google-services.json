@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "493130797764",
-    "project_id": "fix-my-ride-a709c",
-    "storage_bucket": "fix-my-ride-a709c.firebasestorage.app"
+    "project_number": "479359656011",
+    "project_id": "urban-landscape-fef82",
+    "storage_bucket": "urban-landscape-fef82.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:493130797764:android:b0a934525349de63fd6f91",
+        "mobilesdk_app_id": "1:479359656011:android:304156188f1a963094edce",
         "android_client_info": {
           "package_name": "com.example.admin_fix_my_ride"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAAm6NLu5sl3YAiCWdJmYSuNEvrDt8RMoA"
+          "current_key": "AIzaSyD6DU_VI1Quk6wFX6vEC6CG30ogm-0_Otg"
         }
       ],
       "services": {

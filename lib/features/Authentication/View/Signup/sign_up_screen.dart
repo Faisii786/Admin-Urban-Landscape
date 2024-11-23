@@ -7,7 +7,6 @@ import 'package:admin_fix_my_ride/features/Authentication/View/Signin/sign_in_sc
 import 'package:admin_fix_my_ride/features/Authentication/View/Wellcome/wellcome_screen.dart';
 import 'package:admin_fix_my_ride/utills/Validation/validations.dart';
 import 'package:admin_fix_my_ride/utills/constants/colors.dart';
-import 'package:admin_fix_my_ride/utills/constants/images.dart';
 import 'package:admin_fix_my_ride/utills/constants/size_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -31,38 +30,20 @@ class SignupScreen extends StatelessWidget {
                   bottomRight: Radius.circular(60),
                 ),
               ),
-              padding: const EdgeInsets.only(top: 20, bottom: 40),
+              padding: const EdgeInsets.only(top: 40, left: 10, bottom: 50),
               child: Stack(
                 children: [
-                  Positioned(
-                    top: 10,
-                    left: 10,
-                    child: CustomBackButton(
-                      ontap: () {
-                        Get.to(() => const WelcomeScreen());
-                      },
-                    ),
+                  CustomBackButton(
+                    ontap: () {
+                      Get.to(() => const WelcomeScreen());
+                    },
                   ),
                   Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        CustomText(
-                          text: 'SIGN UP',
-                          txtColor: AppColors.grey5,
-                          fontFamily: 'Poppins',
-                          fontSize: 24,
-                        ),
-                        const CustomSizedBox(
-                          width: 0.04,
-                        ),
-                        Image.asset(
-                          CustomImages.whiteAppLogo,
-                          width: 80,
-                          height: 80,
-                        ),
-                      ],
+                    child: CustomText(
+                      text: 'SIGN UP',
+                      txtColor: AppColors.grey5,
+                      fontFamily: 'Poppins',
+                      fontSize: 24,
                     ),
                   ),
                 ],
@@ -106,7 +87,7 @@ class SignupScreen extends StatelessWidget {
                       hintText: 'Password',
                       obscureText: true,
                       prefixIcon: Icons.lock,
-                      suffixIcon: Icons.visibility_off,
+                      // suffixIcon: Icons.visibility_off,
                       controller: controller.password,
                       validator: (value) =>
                           customValidations.validatePassword(value),

@@ -1,6 +1,6 @@
 import 'package:admin_fix_my_ride/features/Dashboard%20Screens/Widgets/service_items.dart';
-import 'package:admin_fix_my_ride/features/Services/all_services.dart';
-import 'package:admin_fix_my_ride/features/Services/services_full_detail_screen.dart';
+import 'package:admin_fix_my_ride/features/Services/View/all_services.dart';
+import 'package:admin_fix_my_ride/features/Services/View/services_full_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

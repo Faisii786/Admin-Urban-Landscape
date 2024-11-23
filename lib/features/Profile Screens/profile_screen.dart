@@ -1,5 +1,6 @@
 import 'package:admin_fix_my_ride/Common/widgets/custom_text.dart';
 import 'package:admin_fix_my_ride/data/repository/auth_repo.dart';
+import 'package:admin_fix_my_ride/data/repository/user_repo.dart';
 import 'package:admin_fix_my_ride/utills/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,37 +28,41 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final repo = Get.put(UserRepository());
+    final userData = repo.userData;
     return Container(
       width: double.infinity,
       color: AppColors.primaryColor,
       padding: const EdgeInsets.only(top: 40, bottom: 20),
-      child: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CircleAvatar(
-            radius: 40,
-            backgroundColor: Colors.white,
-            child: CustomText(
-              text: 'FA',
-              txtColor: Colors.black87,
-              fontSize: 24,
+      child: Obx(
+        () => Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const CircleAvatar(
+              radius: 40,
+              backgroundColor: Colors.white,
+              child: CustomText(
+                text: 'FA',
+                txtColor: Colors.black87,
+                fontSize: 24,
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const SizedBox(height: 10),
+            CustomText(
+              text: userData['name'] ?? 'John',
+              txtColor: Colors.white,
+              fontSize: 18,
               textAlign: TextAlign.center,
             ),
-          ),
-          SizedBox(height: 10),
-          CustomText(
-            text: 'Faisal Aslam',
-            txtColor: Colors.white,
-            fontSize: 18,
-            textAlign: TextAlign.center,
-          ),
-          CustomText(
-            text: 'faisalaslam218@gmail.com',
-            txtColor: Colors.white,
-            fontSize: 14,
-            textAlign: TextAlign.center,
-          ),
-        ],
+            CustomText(
+              text: userData['email'] ?? 'john@gmail.com',
+              txtColor: Colors.white,
+              fontSize: 14,
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -72,31 +77,16 @@ class ProfileMenuList extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       children: [
-        const ProfileMenuItem(
-          icon: Icons.directions_car,
-          label: 'My Vehicles',
-          color: Colors.blue,
-        ),
-        const ProfileMenuItem(
-          icon: Icons.calendar_today,
-          label: 'My Bookings',
-          color: Colors.grey,
-        ),
-        const ProfileMenuItem(
-          icon: Icons.rate_review,
-          label: 'My Reviews',
-          color: Colors.green,
-        ),
-        const ProfileMenuItem(
-          icon: Icons.edit,
-          label: 'Edit Profile',
-          color: Colors.blue,
-        ),
-        const ProfileMenuItem(
-          icon: Icons.delete,
-          label: 'Delete Profile',
-          color: Colors.red,
-        ),
+        // const ProfileMenuItem(
+        //   icon: Icons.edit,
+        //   label: 'Edit Profile',
+        //   color: Colors.blue,
+        // ),
+        // const ProfileMenuItem(
+        //   icon: Icons.delete,
+        //   label: 'Delete Profile',
+        //   color: Colors.red,
+        // ),
         ProfileMenuItem(
           ontap: () {
             controller.signOutWarningPopup();

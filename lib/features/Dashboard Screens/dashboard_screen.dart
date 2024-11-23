@@ -1,6 +1,6 @@
 import 'package:admin_fix_my_ride/Common/widgets/custom_text.dart';
 import 'package:admin_fix_my_ride/features/Dashboard%20Screens/Widgets/build_analytics.dart';
-import 'package:admin_fix_my_ride/features/Services/service_form.dart';
+import 'package:admin_fix_my_ride/features/Services/View/service_form.dart';
 import 'package:admin_fix_my_ride/features/Dashboard%20Screens/Widgets/dashboard_services.dart';
 import 'package:admin_fix_my_ride/features/Dashboard%20Screens/Widgets/drawer.dart';
 import 'package:admin_fix_my_ride/utills/constants/colors.dart';
@@ -23,17 +23,9 @@ class DashboardScreen extends StatelessWidget {
           text: 'Urban Tropical Landscape',
           txtColor: AppColors.grey5,
           fontSize: 20,
+          fontFamily: 'styFont',
+          fontWeight: FontWeight.bold,
         ),
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.account_circle_outlined,
-              color: AppColors.grey10,
-              size: 27,
-            ),
-            onPressed: () {},
-          ),
-        ],
       ),
       drawer: const CustomDrawer(),
       body: Row(
@@ -86,7 +78,7 @@ class DashboardScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppColors.primaryColor,
-        onPressed: () => Get.to(() => const AddServiceForm()),
+        onPressed: () => Get.to(() => AddServiceForm()),
         child: Icon(
           Iconsax.add,
           color: AppColors.grey5,

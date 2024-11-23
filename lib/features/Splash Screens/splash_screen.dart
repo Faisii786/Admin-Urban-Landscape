@@ -1,10 +1,8 @@
-import 'dart:async';
-import 'package:admin_fix_my_ride/features/Authentication/View/Wellcome/wellcome_screen.dart';
+import 'package:admin_fix_my_ride/features/Splash%20Screens/splash_service.dart';
 import 'package:admin_fix_my_ride/utills/constants/colors.dart';
 import 'package:admin_fix_my_ride/utills/constants/size_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,12 +12,13 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  SplashServices splashServices = SplashServices();
+
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 4), () {
-      Get.to(() => const WelcomeScreen());
-    });
+
+    splashServices.checkUserStatus(context);
   }
 
   @override
